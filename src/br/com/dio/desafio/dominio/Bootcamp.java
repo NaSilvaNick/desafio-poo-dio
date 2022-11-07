@@ -42,16 +42,16 @@ public class Bootcamp {
     return devsInscritos;
   }
 
-  public void setDevsInscritos(Set<Dev> devsInscritos) {
-    this.devsInscritos = devsInscritos;
+  public void adicionarDev(Dev dev) {
+    this.devsInscritos.add(dev);
   }
 
   public Set<Conteudo> getConteudos() {
     return conteudos;
   }
 
-  public void setConteudos(Set<Conteudo> conteudos) {
-    this.conteudos = conteudos;
+  public void adicionarConteudo(Conteudo conteudo) {
+    this.conteudos.add(conteudo);
   }
 
   @Override
@@ -64,6 +64,6 @@ public class Bootcamp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(getNome(), getDescricao(), getDataInicial(), getDataFinal(), getDevsInscritos(), getConteudos());
+    return Objects.hash(getNome(), getDescricao(), getDataInicial(), getDataFinal(), getConteudos());
   }
 }
